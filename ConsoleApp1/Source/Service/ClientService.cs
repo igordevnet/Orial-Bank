@@ -1,5 +1,6 @@
 ﻿using ConsoleApp1.Source.Controllers.DTOs;
 using ConsoleApp1.Source.Entities;
+using ConsoleApp1.Source.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace ConsoleApp1.Source.Service
 {
     public class ClientService : ClientServiceInterface
     {
-        private readonly ClientServiceInterface _clientRepository;
+        private readonly ClientRepository _clientRepository;
 
-        public ClientService(ClientServiceInterface clientRepository)
+        public ClientService(ClientRepository clientRepository)
         {
             _clientRepository = clientRepository;
         }
@@ -34,7 +35,7 @@ namespace ConsoleApp1.Source.Service
                 Phone = clientDto.Phone
             };
 
-            _clientRepository.Add(client);
+            _clientRepository.AddClient(client);
         }
 
         public ClientPersonDTO GetClientById(string id)
@@ -49,7 +50,7 @@ namespace ConsoleApp1.Source.Service
                 Name = client.Name,
                 Profession = client.Profession,
                 Education = client.Education,
-                Identity = client.Indentity,
+                Identity = client.Identity,
                 BirthDate = client.BirthDate,
                 Salary = client.Salary,
                 Assets = client.Assets,

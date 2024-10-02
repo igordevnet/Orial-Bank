@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1.Source.Entities;
 
-    internal class Client : Person
+    public class Client : Person
     {
         private string _Email;
         private string _Password;

@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1.Source.Entities;
 
-    internal class Person
+    public class Person
     {
 
         private string _Name;
