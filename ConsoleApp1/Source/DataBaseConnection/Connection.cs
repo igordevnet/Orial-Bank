@@ -1,16 +1,19 @@
 ﻿using MySql.Data.MySqlClient;
+using DotNetEnv;
 
-public class Connection 
+public class Connection
 {
-    public MySqlConnection server = new MySqlConnection(@"Server=localhost;Port=3308;Database=bancoOrial;User=root;Pwd=");
+    private readonly string _ConnectionDbUrl;
+    private MySqlConnection _Server;
 
-    public void ConectBd()
+    private Connection()
     {
-        server.Open();
+        DotEnv.Load();
+        _ConnectionDbUrl = Environment.GetEnvironmentVariable("ConnectionDbURL");
+        _Server = new MySqlConnection(_connectionDbUrl);
     }
 
-    public void DesconectBd()
-    {
-        server.Close();
-    }
+    public void ConectBd() => _Server.Open();
+
+    public void DesconectBd() => _Server.Close();
 }
