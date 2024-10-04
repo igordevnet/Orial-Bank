@@ -1,6 +1,6 @@
 ﻿using ConsoleApp1.Source.Controllers.DTOs;
-using ConsoleApp1.Source.Entities;
-using ConsoleApp1.Source.Repositories.DAOs;
+using ConsoleApp1.Source.Models.Entities;
+using ConsoleApp1.Source.Models.Repositories.DAOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ConsoleApp1.Source.Repositories
+namespace ConsoleApp1.Source.Models.Repositories
 {
     public class ClientRepository : ClientRepositoryInterface
     {

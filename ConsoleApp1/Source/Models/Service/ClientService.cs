@@ -1,13 +1,13 @@
 ﻿using ConsoleApp1.Source.Controllers.DTOs;
-using ConsoleApp1.Source.Entities;
-using ConsoleApp1.Source.Repositories;
+using ConsoleApp1.Source.Models.Entities;
+using ConsoleApp1.Source.Models.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Source.Service
+namespace ConsoleApp1.Source.Models.Service
 {
     public class ClientService : ClientServiceInterface
     {

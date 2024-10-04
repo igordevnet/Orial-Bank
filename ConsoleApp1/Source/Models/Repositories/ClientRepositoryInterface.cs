@@ -1,11 +1,11 @@
-﻿using ConsoleApp1.Source.Entities;
+﻿using ConsoleApp1.Source.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Source.Repositories
+namespace ConsoleApp1.Source.Models.Repositories
 {
     public interface ClientRepositoryInterface
     {

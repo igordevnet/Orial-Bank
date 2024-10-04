@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 using ConsoleApp1.Source.Entities;
-namespace ConsoleApp1.Source.Repositories.DAOs
+namespace ConsoleApp1.Source.Models.Repositories.DAOs
 {
     public class DAOClient
     {
@@ -25,7 +25,7 @@ namespace ConsoleApp1.Source.Repositories.DAOs
         {
         }
         public void DeleteClientDb()
-        { 
+        {
         }
         public DAOClient GetByIdClientDb()
         {

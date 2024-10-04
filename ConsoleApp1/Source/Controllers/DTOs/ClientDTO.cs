@@ -11,7 +11,7 @@ namespace ConsoleApp1.Source.Controllers.DTOs
         public string Name { get; set; }
         public string Profession { get; set; }
         public string Education { get; set; }
-        public string Identity { get; set; } 
+        public string Identity { get; set; }
         public DateTime BirthDate { get; set; }
         public decimal Salary { get; set; }
         public decimal Assets { get; set; }

@@ -6,11 +6,11 @@ public class Connection
     private readonly string _ConnectionDbUrl;
     private MySqlConnection _Server;
 
-    private Connection()
+
+    private protected Connection()
     {
-        DotEnv.Load();
-        _ConnectionDbUrl = Environment.GetEnvironmentVariable("ConnectionDbURL");
-        _Server = new MySqlConnection(_connectionDbUrl);
+        _ConnectionDbUrl = JsonConnection.ConnectionDbURL;
+        _Server = new MySqlConnection(_ConnectionDbUrl);
     }
 
     public void ConectBd() => _Server.Open();

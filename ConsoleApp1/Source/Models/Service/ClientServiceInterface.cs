@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Source.Service
+namespace ConsoleApp1.Source.Models.Service
 {
     public interface ClientServiceInterface
     {
