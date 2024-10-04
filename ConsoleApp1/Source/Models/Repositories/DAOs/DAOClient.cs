@@ -1,5 +1,6 @@
 ﻿using System.Data.Common;
-using ConsoleApp1.Source.Entities;
+using ConsoleApp1.Source.Models.Entities;
+using ConsoleApp1.Source.DataBaseConnection;
 namespace ConsoleApp1.Source.Models.Repositories.DAOs
 {
     public class DAOClient
@@ -16,10 +17,11 @@ namespace ConsoleApp1.Source.Models.Repositories.DAOs
         public string Phone { get; set; }
         public string Id { get; set; }
 
-        Connection connect = new Connection();
+        Connection connectionDb = new Connection();
 
         public void AddClientDb()
         {
+
         }
         public void UpdateClientDb()
         {

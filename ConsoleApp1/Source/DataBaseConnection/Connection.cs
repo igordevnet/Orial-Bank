@@ -1,19 +1,22 @@
 ﻿using MySql.Data.MySqlClient;
 using DotNetEnv;
 
-public class Connection
+namespace ConsoleApp1.Source.DataBaseConnection
 {
-    private string _ConnectionDbUrl;
-    private MySqlConnection _Server;
-
-    private Connection()
+    public class Connection
     {
-        DotEnv.Load();
-        _ConnectionDbUrl = Environment.GetEnvironmentVariable("ConnectionDbURL");
-        _Server = new MySqlConnection(_ConnectionDbUrl);
+        private string _ConnectionDbUrl;
+        private MySqlConnection _Server;
+
+        public Connection()
+        {
+            DotEnv.Load();
+            _ConnectionDbUrl = Environment.GetEnvironmentVariable("ConnectionDbURL");
+            _Server = new MySqlConnection(_ConnectionDbUrl);
+        }
+
+        public void ConectBd() => _Server.Open();
+
+        public void DesconectBd() => _Server.Close();
     }
-
-    public void ConectBd() => _Server.Open();
-
-    public void DesconectBd() => _Server.Close();
 }
