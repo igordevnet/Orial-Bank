@@ -3,13 +3,13 @@ using DotNetEnv;
 
 public class Connection
 {
-    private readonly string _ConnectionDbUrl;
+    private string _ConnectionDbUrl;
     private MySqlConnection _Server;
 
-
-    private protected Connection()
+    private Connection()
     {
-        _ConnectionDbUrl = JsonConnection.ConnectionDbURL;
+        DotEnv.Load();
+        _ConnectionDbUrl = Environment.GetEnvironmentVariable("ConnectionDbURL");
         _Server = new MySqlConnection(_ConnectionDbUrl);
     }
 
